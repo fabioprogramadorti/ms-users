@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { featureModules } from 'src';
+import { globalModules } from './modules/global';
 
 @Module({
-  imports: [...featureModules],
+  imports: [...globalModules, ...featureModules],
   controllers: [],
   providers: [],
 })
