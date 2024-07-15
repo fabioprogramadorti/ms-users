@@ -1,3 +1,4 @@
-import { prismaModule } from './prisma/prisma.module';
+import { ConfigModule } from '@nestjs/config';
+import { PrismaModule } from './prisma/prisma.module';
 
-export const globalModules = [prismaModule];
+export const globalModules = [PrismaModule, ConfigModule.forRoot()];
